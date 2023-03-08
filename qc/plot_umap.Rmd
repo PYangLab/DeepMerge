@@ -1,0 +1,125 @@
+# load package
+```{r}
+suppressPackageStartupMessages({
+  library(SingleCellExperiment)
+  library(scater)
+  library(data.table)
+  library(glue)
+  })
+```
+
+# colour panel
+```{r}
+scPalette <- function(n) {
+    colorSpace <- c('#E41A1C','#377EB8','#4DAF4A','#984EA3','#F29403','#F781BF','#BC9DCC','#A65628','#54B0E4','#222F75','#1B9E77','#B2DF8A',
+                    '#E3BE00','#FB9A99','#E7298A','#910241','#00CDD1','#A6CEE3','#CE1261','#5E4FA2','#8CA77B','#00441B','#DEDC00','#B3DE69',
+                    '#8DD3C7','#999999')
+    if (n <= length(colorSpace)) {
+        colors <- colorSpace[1:n]
+    } else {
+        colors <- grDevices::colorRampPalette(colorSpace)(n)
+    }
+    return(colors)
+}
+```
+
+# useful function
+```{r}
+make_sce <- function(expr, label,batch){
+  sce <- SingleCellExperiment(list(logcounts=expr))
+  sce$celltype <- as.factor(label)
+  sce$batch <- as.factor(batch)
+  return(sce)
+}
+```
+
+# load embedding data 
+```{r}
+data_res <- fread(glue("./../result/Rama/data_merged.csv"))
+data_res <- data_res[2:dim(data_res)[1],2:dim(data_res)[2]]
+label <- fread(glue("./../data/cty.csv"))$V2
+label <- label[2:length(label)]
+batch <- fread(glue("./../data/batch.csv"))$x
+data_merged <- t(data_res)
+label <- as.factor(label)
+```
+
+```{r}
+sce_control <- make_sce(data_merged, label, batch)
+set.seed(0)
+sce_control <- runTSNE(sce_control)
+sce_umap_dims <- sce_control@int_colData@listData[["reducedDims"]]@listData[["TSNE"]]
+sce_umap_dims <- as.data.frame(sce_umap_dims)
+```
+
+```{r}
+    plot1<-ggplot(sce_umap_dims,mapping = aes(x=V1, y=V2, col=as.factor(label)))+ geom_point()+scale_colour_manual(values = scPalette(length(names(table(label)))))+labs(x = "", y = "", title = "") + theme_classic()  +         theme(aspect.ratio = 1)+ theme(panel.grid =element_blank()) +theme(axis.text = element_blank()) +  theme(axis.ticks = element_blank()) +  theme(plot.title = element_text(hjust = 0.5,size=8),panel.spacing = unit(0, "lines")) 
+    plot2<-ggplot(sce_umap_dims,mapping = aes(x=V1, y=V2, col=as.factor(batch)))+ geom_point()+scale_colour_manual(values = scPalette(length(names(table(batch)))))+labs(x = "", y = "", title = "") + theme_classic()  +         theme(aspect.ratio = 1)+ theme(panel.grid =element_blank()) +theme(axis.text = element_blank()) +  theme(axis.ticks = element_blank()) +  theme(plot.title = element_text(hjust = 0.5,size=8),panel.spacing = unit(0, "lines")) 
+    ggsave(plot1, file="./../img/embedding_cty.pdf")
+    ggsave(plot2, file="./../img/embedding_batch.pdf")
+```
+
+# load reconstructed rna data 
+```{r}
+data_res <- fread(glue("./../result/Rama/rna_merged.csv"))
+data_res <- data_res[2:dim(data_res)[1],2:dim(data_res)[2]]
+label <- fread(glue("./../data/cty.csv"))$V2
+label <- label[2:length(label)]
+batch <- fread(glue("./../data/batch.csv"))$x
+data_merged <- t(data_res)
+label <- as.factor(label)
+```
+
+```{r}
+sce_control <- make_sce(data_merged, label, batch)
+set.seed(0)
+sce_control <- runTSNE(sce_control)
+sce_umap_dims <- sce_control@int_colData@listData[["reducedDims"]]@listData[["TSNE"]]
+sce_umap_dims <- as.data.frame(sce_umap_dims)
+```
+
+```{r}
+    plot1<-ggplot(sce_umap_dims,mapping = aes(x=V1, y=V2, col=as.factor(label)))+ geom_point()+scale_colour_manual(values = scPalette(length(names(table(label)))))+labs(x = "", y = "", title = "") + theme_classic()  +         theme(aspect.ratio = 1)+ theme(panel.grid =element_blank()) +theme(axis.text = element_blank()) +  theme(axis.ticks = element_blank()) +  theme(plot.title = element_text(hjust = 0.5,size=8),panel.spacing = unit(0, "lines")) 
+    plot2<-ggplot(sce_umap_dims,mapping = aes(x=V1, y=V2, col=as.factor(batch)))+ geom_point()+scale_colour_manual(values = scPalette(length(names(table(batch)))))+labs(x = "", y = "", title = "") + theme_classic()  +         theme(aspect.ratio = 1)+ theme(panel.grid =element_blank()) +theme(axis.text = element_blank()) +  theme(axis.ticks = element_blank()) +  theme(plot.title = element_text(hjust = 0.5,size=8),panel.spacing = unit(0, "lines")) 
+    ggsave(plot1, file="./../img/rna_cty.pdf")
+    ggsave(plot2, file="./../img/rna_batch.pdf")
+```
+
+# load reconstructed adt data 
+```{r}
+data_res <- fread(glue("./../result/Rama/adt_merged.csv"))
+data_res <- data_res[2:dim(data_res)[1],2:dim(data_res)[2]]
+label <- fread(glue("./../data/cty.csv"))$V2
+label <- label[2:length(label)]
+batch <- fread(glue("./../data/batch.csv"))$x
+data_merged <- t(data_res)
+label <- as.factor(label)
+```
+
+```{r}
+sce_control <- make_sce(data_merged, label, batch)
+set.seed(0)
+sce_control <- runTSNE(sce_control)
+sce_umap_dims <- sce_control@int_colData@listData[["reducedDims"]]@listData[["TSNE"]]
+sce_umap_dims <- as.data.frame(sce_umap_dims)
+```
+
+```{r}
+    plot1<-ggplot(sce_umap_dims,mapping = aes(x=V1, y=V2, col=as.factor(label)))+ geom_point()+scale_colour_manual(values = scPalette(length(names(table(label)))))+labs(x = "", y = "", title = "") + theme_classic()  +         theme(aspect.ratio = 1)+ theme(panel.grid =element_blank()) +theme(axis.text = element_blank()) +  theme(axis.ticks = element_blank()) +  theme(plot.title = element_text(hjust = 0.5,size=8),panel.spacing = unit(0, "lines")) 
+    plot2<-ggplot(sce_umap_dims,mapping = aes(x=V1, y=V2, col=as.factor(batch)))+ geom_point()+scale_colour_manual(values = scPalette(length(names(table(batch)))))+labs(x = "", y = "", title = "") + theme_classic()  +         theme(aspect.ratio = 1)+ theme(panel.grid =element_blank()) +theme(axis.text = element_blank()) +  theme(axis.ticks = element_blank()) +  theme(plot.title = element_text(hjust = 0.5,size=8),panel.spacing = unit(0, "lines")) 
+    ggsave(plot1, file="./../img/adt_cty.pdf")
+    ggsave(plot2, file="./../img/adt_batch.pdf")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
