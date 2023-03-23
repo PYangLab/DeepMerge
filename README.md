@@ -90,6 +90,9 @@ By running the `./qc/plot_TSNE.Rmd`, we can obtain the TSNE of the batch correct
 
 <img width=58% src="https://github.com/liuchunlei0430/DeepMerge/blob/main/img/batch_corrected.png"/>
 
+## Instructions on how to run DeepMerge on your data
+To adjust these analyses to your dataset, adjust the inputs to provide your data, cell type labels, and batch information. The data is .h5 file with all data from different batches and cell types, the cell type label and batch files are .csv file.
+
 ## Reference
 [1] Ramaswamy, A. et al. Immune dysregulation and autoreactivity correlate with disease severity in
 SARS-CoV-2-associated multisystem inflammatory syndrome in children. Immunity 54, 1083–
