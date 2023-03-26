@@ -37,9 +37,9 @@ make_sce <- function(expr, label,batch){
 ```{r}
 data_res <- fread(glue("./../result/Rama/data_merged.csv"))
 data_res <- data_res[2:dim(data_res)[1],2:dim(data_res)[2]]
-label <- fread(glue("./../data/cty.csv"))$V2
+label <- fread(glue("./../data/Rama/cty.csv"))$V2
 label <- label[2:length(label)]
-batch <- fread(glue("./../data/batch.csv"))$x
+batch <- fread(glue("./../data/Rama/batch.csv"))$x
 data_merged <- t(data_res)
 label <- as.factor(label)
 ```
@@ -63,9 +63,9 @@ sce_umap_dims <- as.data.frame(sce_umap_dims)
 ```{r}
 data_res <- fread(glue("./../result/Rama/rna_merged.csv"))
 data_res <- data_res[2:dim(data_res)[1],2:dim(data_res)[2]]
-label <- fread(glue("./../data/cty.csv"))$V2
+label <- fread(glue("./../data/Rama/cty.csv"))$V2
 label <- label[2:length(label)]
-batch <- fread(glue("./../data/batch.csv"))$x
+batch <- fread(glue("./../data/Rama/batch.csv"))$x
 data_merged <- t(data_res)
 label <- as.factor(label)
 ```
@@ -89,9 +89,9 @@ sce_umap_dims <- as.data.frame(sce_umap_dims)
 ```{r}
 data_res <- fread(glue("./../result/Rama/adt_merged.csv"))
 data_res <- data_res[2:dim(data_res)[1],2:dim(data_res)[2]]
-label <- fread(glue("./../data/cty.csv"))$V2
+label <- fread(glue("./../data/Rama/cty.csv"))$V2
 label <- label[2:length(label)]
-batch <- fread(glue("./../data/batch.csv"))$x
+batch <- fread(glue("./../data/Rama/batch.csv"))$x
 data_merged <- t(data_res)
 label <- as.factor(label)
 ```
