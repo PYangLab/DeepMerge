@@ -1,0 +1,32 @@
+name: environment_deepmerge
+channels:
+  - pytorch
+  - bioconda
+  - nvidia
+  - conda-forge
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - defaults
+dependencies:
+  - cudatoolkit=11.1.74=h6bb024c_0
+  - numpy-base=1.19.2=py37hfa32c7d_0
+  - python=3.7.10=hb7a2778_104_cpython
+  - pytorch=1.9.1=py3.7_cuda11.1_cudnn8.0.5_0
+  - torchaudio=0.9.1=py37
+  - torchvision=0.10.1=py37_cu111
+  - pip:
+    - argparse==1.4.0
+    - h5py==3.1.0
+    - numpy==1.19.5
+    - pandas==1.3.4
+    - pillow==8.4.0
+    - scanpy==1.8.2
+    - scipy==1.7.1
+    - tqdm==4.62.3
+
+prefix: /home/lcl/anaconda3/envs/environment_deepmerge
