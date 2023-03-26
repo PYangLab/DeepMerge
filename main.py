@@ -25,6 +25,7 @@ parser.add_argument('--modality3', type=str, default="NULL", help='modality name
 parser.add_argument('--modality1_path', metavar='DIR', default='NULL', help='path to modality1 data')
 parser.add_argument('--modality2_path', metavar='DIR', default='NULL', help='path to modality2 data')
 parser.add_argument('--modality3_path', metavar='DIR', default='NULL', help='path to modality3 data')
+parser.add_argument('--result_path', metavar='DIR', default='./result/', help='path to modality3 data')
 parser.add_argument('--cty_path', metavar='DIR', default='NULL', help='path to cell type ')
 parser.add_argument('--batch_path', metavar='DIR', default='NULL', help='path to batch information')
 
@@ -139,7 +140,9 @@ for i in range(batch_dim):
     
 ####################save#################
 modality_list = range(0, modality1_all.size(0))
-cell_name = ['cell_{}'.format(b) for b in modality_list]  
+cell_name = ['cell_{}'.format(b) for b in modality_list]
+if not os.path.exists(args.result_path):
+    os.makedirs(args.result_path)
 pd.DataFrame(torch.cat(embedding,0).cpu().numpy(), index = cell_name).to_csv("./result/{}/data_merged.csv".format(dataset))
 pd.DataFrame(torch.cat(reconstruction_modality1,0).cpu().numpy(), index = cell_name).to_csv("./result/{}/{}_merged.csv".format(dataset,modality1))
 pd.DataFrame(torch.cat(reconstruction_modality2,0).cpu().numpy(), index = cell_name).to_csv("./result/{}/{}_merged.csv".format(dataset,modality2))
