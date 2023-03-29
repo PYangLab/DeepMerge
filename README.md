@@ -133,7 +133,7 @@ From the results, it is clear that there are obvious batch effects present among
 cd qc
 Rscript plot_TSNE.Rmd
 ```
-Then, the t-SNE plots illustrating the data after normalization by DeepMerge will be displayed, showcasing the effectiveness of DeepMerge in addressing batch effects.
+Then, the t-SNE plots illustrating the data after normalization by DeepMerge will be displayed, showcasing the effectiveness of DeepMerge in addressing batch effects. The following results show the normalized RNA, normalized ADT, and integrated embedding across modalities after DeepMerge.
 
 <img width=58% src="https://github.com/liuchunlei0430/DeepMerge/blob/main/img/batch_corrected.png"/>
 
