@@ -121,7 +121,7 @@ Other config
 + `--modality3`: The name of the third modality, e.g., ATAC.
 
 ## Visualisation
-The TSNE visualisation of original data are:
+We utilize t-SNE visualization as an effective method to compare and evaluate the data both before and after being noemalised by DeepMerge. This approach provides a clear visual representation of the data distribution and highlights the impact of DeepMerge on the overall structure of the dataset. The t-SNE visualization of the original, unprocessed data is displayed here, allowing for a comprehensive comparison with the results obtained after the application of DeepMerge.
 
 <img width=50% src="https://github.com/liuchunlei0430/DeepMerge/blob/main/img/original.png"/>
 
