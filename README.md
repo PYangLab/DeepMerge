@@ -83,9 +83,7 @@ write_h5(exprs_list = list(rna = train_rna, h5file_list = "/DeepMerge/data/Rama/
 
 ### Example dataset
 
-As an example, the processed CITE-seq dataset by Ramaswamy et al. (GSM166489)[1] is provided for the example run, which is saved in `./DeepMerge/data/Rama/`. Because the RNA data is large, so the users can download it at [link](https://drive.google.com/drive/folders/1nYtSKP8b_ZBlykGwkY3hkjrTIHkc1v0B?usp=sharing). Furthermore,
-users can use the example dataset as input for DeepMerge or use their own datasets.
-Training on demo dataset will cost no more than 1 minute with 1 GPU.
+As an example, we provide the processed CITE-seq dataset by Ramaswamy et al. (GSM166489)[1] for a demonstration run, which is saved in ./DeepMerge/data/Rama/. Since the RNA data is large, users can download it from this [link](https://drive.google.com/drive/folders/1nYtSKP8b_ZBlykGwkY3hkjrTIHkc1v0B?usp=sharing). Users can either use the provided example dataset as input for DeepMerge or utilize their own datasets. Training on the demo dataset should take no more than 1 minute with a single GPU.
 
 ## Running DeepMerge with the example dataset
 ### Training the DeepMerge model (see Arguments section for more details).
