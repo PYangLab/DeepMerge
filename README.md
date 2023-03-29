@@ -143,6 +143,7 @@ To adapt these analyses for your dataset, modify the inputs to include your data
 [1] Ramaswamy, A. et al. Immune dysregulation and autoreactivity correlate with disease severity in
 SARS-CoV-2-associated multisystem inflammatory syndrome in children. Immunity 54, 1083–
 1095.e7 (2021).
+
 [2] Luecken MD, Büttner M, Chaichoompu K, Danese A, Interlandi M, Müller MF, Strobl DC, Zappia L, Dugas M, Colomé-Tatché M, Theis FJ. Benchmarking atlas-level data integration in single-cell genomics. Nature methods. 2022 Jan;19(1):41-50.
 
 ## License
