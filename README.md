@@ -19,7 +19,7 @@ conda activate environment_deepmerge
 Step 2:
 Otain DeepMerge by clonning the github repository:
 ```
-git clone https://github.com/liuchunlei0430/DeepMerge.git
+git clone https://github.com/PYangLab/DeepMerge.git
 ```
 
 
