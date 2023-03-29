@@ -88,13 +88,12 @@ As an example, we provide the processed CITE-seq dataset by Ramaswamy et al. (GS
 
 ## Running DeepMerge with the example dataset
 ### Training the DeepMerge model (see Arguments section for more details).
+You can either run the script file using the following command:
 ```
-cd DeepMerge
 sh run.sh
 ```
-or you can specific the parameters on terminal
+or specify the parameters directly in the terminal:
 ```
-cd DeepMerge
 python main.py --lr 0.02 --epochs 10 --batch_size 256 --hidden_modality1 185 --hidden_modality2 30  --modality1_path "./data/Rama/rna.h5"  --modality2_path "./data/Rama/adt.h5"  --cty_path "./data/Rama/cty.csv" --batch_path "./data/Rama/batch.csv" --dataset "Rama" --modality1 "rna" --modality2 "adt"
 ```
 
