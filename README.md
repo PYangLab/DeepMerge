@@ -134,6 +134,8 @@ Then, the t-SNE plots illustrating the data after normalization by DeepMerge wil
 
 <img width=58% src="https://github.com/liuchunlei0430/DeepMerge/blob/main/img/batch_corrected.png"/>
 
+To quantitatively evaluate the results, we can employ various metrics in both cell type conservation and batch mixing aspects, such as silhouette, NMI, and kBERT, which implemented in the [scib](https://scib.readthedocs.io/en/latest/) [2]. These metrics provide an objective assessment of the performance and effectiveness of the normalization and integration processes.
+
 ## Instructions on how to run DeepMerge on your data
 To adapt these analyses for your dataset, modify the inputs to include your data, cell type labels, and batch information. The data should be in a `.h5` file format, containing all the data from one modality. If there are multiple modalities, you will need to have multiple data files with the same cell order. The cell type labels and batch files should be in `.csv` format and correspond to all the data present.
 
@@ -141,7 +143,7 @@ To adapt these analyses for your dataset, modify the inputs to include your data
 [1] Ramaswamy, A. et al. Immune dysregulation and autoreactivity correlate with disease severity in
 SARS-CoV-2-associated multisystem inflammatory syndrome in children. Immunity 54, 1083–
 1095.e7 (2021).
-
+[2] Luecken MD, Büttner M, Chaichoompu K, Danese A, Interlandi M, Müller MF, Strobl DC, Zappia L, Dugas M, Colomé-Tatché M, Theis FJ. Benchmarking atlas-level data integration in single-cell genomics. Nature methods. 2022 Jan;19(1):41-50.
 
 ## License
 
