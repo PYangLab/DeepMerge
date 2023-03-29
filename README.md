@@ -121,7 +121,7 @@ Other config
 + `--modality3`: The name of the third modality, e.g., ATAC.
 
 ## Visualisation
-We utilize t-SNE visualization as an effective method to compare and evaluate the data both before and after being noemalised by DeepMerge. This approach provides a clear visual representation of the data distribution and highlights the impact of DeepMerge on the overall structure of the dataset. The t-SNE visualization of the original, unprocessed data is displayed here, allowing for a comprehensive comparison with the results obtained after the application of DeepMerge.
+We utilize t-SNE visualization as an effective method to compare and evaluate the data both before and after being normalised by DeepMerge. This approach provides a clear visual representation of the data distribution and highlights the integration performance of DeepMerge. The t-SNE visualization of the original, unprocessed data is:
 
 <img width=50% src="https://github.com/liuchunlei0430/DeepMerge/blob/main/img/original.png"/>
 
@@ -130,7 +130,7 @@ By running the `./qc/plot_TSNE.Rmd`, we can obtain the TSNE of the batch correct
 <img width=58% src="https://github.com/liuchunlei0430/DeepMerge/blob/main/img/batch_corrected.png"/>
 
 ## Instructions on how to run DeepMerge on your data
-To adjust these analyses to your dataset, adjust the inputs to provide your data, cell type labels, and batch information. The data is a .h5 file with all data from one modality. If we have multiple modalities, we need to have multiple data files which have the same cell order. The cell type label and batch files are .csv files for all data.
+To adapt these analyses for your dataset, modify the inputs to include your data, cell type labels, and batch information. The data should be in a `.h5` file format, containing all the data from one modality. If there are multiple modalities, you will need to have multiple data files with the same cell order. The cell type labels and batch files should be in `.csv` format and correspond to all the data present.
 
 ## Reference
 [1] Ramaswamy, A. et al. Immune dysregulation and autoreactivity correlate with disease severity in
