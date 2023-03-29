@@ -125,9 +125,6 @@ We utilize t-SNE visualization as an effective method to compare and evaluate th
 
 <img width=50% src="https://github.com/liuchunlei0430/DeepMerge/blob/main/img/original.png"/>
 
-From the results, we can see there are obvious batch effect among different batches.
-By running the `./qc/plot_TSNE.Rmd`, we can obtain the TSNE of the batch corrected data:
-
 From the results, it is clear that there are obvious batch effects present among different batches. To generate t-SNE visualizations of the data after normalization by DeepMerge, we can employ the ./qc/plot_TSNE.Rmd script by executing the following code snippets:
 ```
 cd qc
