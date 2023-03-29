@@ -65,10 +65,10 @@ pip install scanpy==1.8.2
 ```
 
 
-## Preparing intput for DeepMerge
+## Preparing input for DeepMerge
 DeepMerge’s main function takes raw count expression data (e.g., RNA, ADT, ATAC) in `.h5` format, as well as cell type labels and batch information in .csv format.
 
-Here is an example of how to create a `.h5` file from an count expression matrix `data` using the R environment:
+Here is an example of how to create a .h5 file from a count expression matrix data using the R environment. For your own dataset, you'll need to modify data and the specified save path accordingly.
 ```
 write_h5 <- function(exprs_list, h5file_list) {  
   for (i in seq_along(exprs_list)) {
