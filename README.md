@@ -99,26 +99,26 @@ python main.py --lr 0.02 --epochs 10 --batch_size 256 --hidden_modality1 185 --h
 
 ### Argument
 Training dataset information
-+ `--modality1_path`: path to the first modality.
-+ `--modality2_path`: path to the second modality.
-+ `--modality3_path`: path to the third modality (can be null if there is no data provided). 
-+ `--cty_path`: path to the labels of data.
-+ `--batch_path`: path to the batch information of data.
++ `--modality1_path`: path to the first modality containing all batches.
++ `--modality2_path`: path to the second modality containing all batches.
++ `--modality3_path`: path to the third modality containing all batches. (can be NULL if there is no data provided). 
++ `--cty_path`: path to the cell type labels of all data .
++ `--batch_path`: path to the batch information of all data.
 
 Training and model config
 + `--batch_size`: Batch size.
 + `--epochs`: Number of epochs.
 + `--lr`: Learning rate.
 + `--z_dim`: Dimension of latent space.
-+ `--hidden_modality1`: Hidden layer dimension of the first modality branch.
-+ `--hidden_modality2`: Hidden layer dimension of the second modality branch.
-+ `--hidden_modality3`: Hidden layer dimension of the third modality branch.
++ `--hidden_modality1`: Hidden layer dimension of the first modality.
++ `--hidden_modality2`: Hidden layer dimension of the second modality.
++ `--hidden_modality3`: Hidden layer dimension of the third modality.
 
 Other config
 + `--seed`: The random seed for training.
-+ `--modality1`: The name of the first modality.
-+ `--modality2`: The name of the second modality.
-+ `--modality3`: The name of the third modality.
++ `--modality1`: The name of the first modality, e.g., RNA.
++ `--modality2`: The name of the second modality, e.g., ADT.
++ `--modality3`: The name of the third modality, e.g., ATAC.
 
 ## Visualisation
 The TSNE visualisation of original data are:
