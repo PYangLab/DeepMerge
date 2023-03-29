@@ -25,7 +25,7 @@ conda activate environment_deepmerge
 
 ### Installation by youself
 Step 1:
-Otain Matilda by clonning the github repository:
+Otain DeepMerge by clonning the github repository:
 ```
 git clone https://github.com/PYangLab/DeepMerge.git
 ```
