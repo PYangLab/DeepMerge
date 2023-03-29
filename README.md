@@ -52,7 +52,7 @@ conda install pytorch==1.9.1 torchvision==0.10.1 torchaudio==0.9.1 cudatoolkit=1
 ```
 
 Step 5:
-The following python packages are required for running DeepMerge: argparse, h5py, numpy, pandas, pillow, tqdm, scipy, and scanpy. They can be installed in the conda environment as below:
+The following Python packages are necessary for running DeepMerge: argparse, h5py, numpy, pandas, pillow, tqdm, scipy, and scanpy. You can install them in the conda environment using the commands provided below:
 ```
 pip install argparse==1.4.0
 pip install h5py==3.1.0
