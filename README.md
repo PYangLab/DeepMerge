@@ -7,18 +7,18 @@ Multimodal single-cell omics technologies are revolutionising the field of molec
 
 
 ## Installation
-DeepMerge is developed using PyTorch 1.9.1. We recommend using conda enviroment to install and run DeepMerge. We assume conda is installed. You can use the provided environment or install the environment by yourself accoring to your hardware settings. Note the following installation code snippets were tested on a Ubuntu system (v20.04) with NVIDIA GeForce 3090 GPU. The installation process needs about 5 minutes.
+DeepMerge is developed using PyTorch 1.9.1, and we recommend using a conda environment for its installation and execution. We assume that conda is already installed on your system. You can either use the provided environment or set up the environment yourself based on your hardware configurations. Please note that the following installation code snippets have been tested on an Ubuntu system (v20.04) with an NVIDIA GeForce 3090 GPU. The installation process should take approximately 5 minutes.
 
 ### Installation using provided environment
 Step 1:
 Otain DeepMerge by clonning the github repository:
 ```
 git clone https://github.com/PYangLab/DeepMerge.git
+cd DeepMerge
 ```
 
 Step 2: Create and activate the conda environment for DeepMerge using our provided file
 ```
-cd DeepMerge
 conda env create -f environment_deepmerge.yaml
 conda activate environment_deepmerge
 ```
@@ -28,6 +28,7 @@ Step 1:
 Otain DeepMerge by clonning the github repository:
 ```
 git clone https://github.com/PYangLab/DeepMerge.git
+cd DeepMerge
 ```
 
 Step 2:
