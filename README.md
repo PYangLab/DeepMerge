@@ -7,19 +7,60 @@ Multimodal single-cell omics technologies are revolutionising the field of molec
 
 
 ## Installation
-DeepMerge is developed using PyTorch 1.9.1. We recommend using conda enviroment to install and run DeepMerge. We assume conda is installed. Note the following installation code snippets were tested on a Ubuntu system (v20.04) with NVIDIA GeForce 3090 GPU. The installation process needs about 5 minutes.
+DeepMerge is developed using PyTorch 1.9.1. We recommend using conda enviroment to install and run DeepMerge. We assume conda is installed. You can use the provided environment or install the environment by yourself accoring to your hardware settings. Note the following installation code snippets were tested on a Ubuntu system (v20.04) with NVIDIA GeForce 3090 GPU. The installation process needs about 5 minutes.
 
 ### Installation using provided environment
-Step 1: Create and activate the conda environment for DeepMerge using our provided file
+Step 1:
+Otain DeepMerge by clonning the github repository:
 ```
+git clone https://github.com/PYangLab/DeepMerge.git
+```
+
+Step 2: Create and activate the conda environment for DeepMerge using our provided file
+```
+cd DeepMerge
 conda env create -f environment_deepmerge.yaml
 conda activate environment_deepmerge
 ```
 
-Step 2:
-Otain DeepMerge by clonning the github repository:
+### Installation by youself
+Step 1:
+Otain Matilda by clonning the github repository:
 ```
 git clone https://github.com/PYangLab/DeepMerge.git
+```
+
+Step 2:
+Create and activate the conda environment for DeepMerge
+```
+conda create -n environment_deepmerge python=3.7
+conda activate environment_deepmerge
+```
+
+Step 3:
+Check the environment including GPU settings and the highest CUDA version allowed by the GPU.
+```
+nvidia-smi
+```
+
+Step 4:
+Install pytorch and cuda version based on your GPU settings according to [PyTorch](https://pytorch.org).  
+```
+# Example code for installing CUDA 11.3
+conda install pytorch==1.9.1 torchvision==0.10.1 torchaudio==0.9.1 cudatoolkit=11.3 -c pytorch -c conda-forge
+```
+
+Step 5:
+The following python packages are required for running DeepMerge: argparse, h5py, numpy, pandas, pillow, tqdm, scipy, and scanpy. They can be installed in the conda environment as below:
+```
+pip install argparse==1.4.0
+pip install h5py==3.1.0
+pip install numpy==1.19.5
+pip install pandas==1.3.4
+pip install pillow==8.4.0
+pip install tqdm==4.62.3
+pip install scipy==1.7.1
+pip install scanpy==1.8.2
 ```
 
 
