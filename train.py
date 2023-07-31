@@ -20,8 +20,8 @@ def train_model(model, dl, lr, epochs, classify_dim=17, best_top1_acc=0, save_pa
     criterion_smooth_cty = CrossEntropyLabelSmooth().to(device)
     for epoch in tqdm(range(1, epochs + 1)):
         model.train()
+        optimizer.zero_grad()
         for batch_sample in zip(*(dl)):
-            optimizer.zero_grad()
             for i in range(len(dl)):
                 data_label = batch_sample[i]
                 data = data_label['data']
