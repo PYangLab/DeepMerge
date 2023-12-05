@@ -3,7 +3,7 @@
 Multimodal single-cell omics technologies are revolutionising the field of molecular and cell biology, allowing joint profiling of multiple molecular features at single-cell resolution. Data generated from these technologies are characterised by multimodality and multi-batch, and their integration is essential for precise and holistic characterisation of cellular and biological systems. However, the lack of methods for simultaneous batch effect removal and data modality integration, termed “cross integration”, prevents discoveries that would be observable when the modalities of a single cell are analysed together. Here, we developed DeepMerge, a multi-task deep learning framework, for cross integration of multimodal single-cell omics data. Using a large collection of datasets, we demonstrate that DeepMerge enables versatile integration of various combinations of multi-batch and multimodal singlecell omics datasets that is unachievable by alternative methods and facilitates accurate separation of cell-type subpopulations and identification of molecular features underpinning cell identity. Together, we present a much-needed method for multimodal single-cell omics data analyses
 
 
-<img width=100% src="https://github.com/PYangLab/DeepMerge/blob/main/img/main.png"/>
+<img width=100% src="https://github.com/PYangLab/DeepMerge/blob/main/img/Fig2_schematic.png"/>
 
 
 ## Installation
